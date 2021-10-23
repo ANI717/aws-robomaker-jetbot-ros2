@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>jetbot_description</name>
+  <version>2.0.0</version>
+  <description>
+    <p>ROS2 URDF Description package for JetBot</p>
+    <p>This package contains configuration data, 3D models and launch files for JetBot robot</p>
+  </description>
+  <author email="animesh.ani@live.com">ANI717</author>
+  <maintainer email="animesh.ani@live.com">ANI717</maintainer>
+  <license>MIT-0</license>
+  
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  
+  <depend>gazebo_ros</depend>
+  <depend>gazebo_ros_pkgs</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>rviz2</depend>
+  <depend>xacro</depend>
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+    <gazebo_ros gazebo_model_path="${prefix}/.."/>
+    <gazebo_ros plugin_path="${prefix}/lib" gazebo_media_path="${prefix}"/>
+  </export>
+</package>
